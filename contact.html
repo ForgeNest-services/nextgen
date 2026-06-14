@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact NextGen Sports Nepal - Enroll your child or partner with us for professional sports training programs." />
+    <meta name="keywords" content="contact, enrollment, sports training, partnership, NextGen Sports" />
+    <title>Contact Us - NextGen Sports Nepal</title>
+    <link rel="canonical" href="https://www.nextgensports.com.np/contact" />
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body>
+    <nav class="sticky top-0 z-50 bg-white shadow-sm">
+      <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center">
+          <a href="./index.html"><img src="./assets/logo.png" alt="NextGen Sports Nepal" class="h-10 w-auto" /></a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="./index.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Home</a>
+          <a href="./about.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">About</a>
+          <a href="./overview.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Overview</a>
+          <a href="./services.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Programs</a>
+          <a href="./gallery.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Gallery</a>
+          <a href="./blog.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Blog</a>
+        </div>
+        <div class="hidden md:block">
+          <a href="#" class="bg-brand-red text-white px-6 py-2 rounded-lg font-semibold hover:bg-brand-navy transition-colors">Contact Us</a>
+        </div>
+        <button id="mobileMenuBtn" class="md:hidden flex flex-col space-y-1.5 focus:outline-none">
+          <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
+          <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
+          <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
+        </button>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+        <div class="max-w-screen-xl mx-auto px-6 py-4 flex flex-col space-y-4">
+          <a href="./index.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Home</a>
+          <a href="./about.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">About</a>
+          <a href="./overview.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Overview</a>
+          <a href="./services.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Programs</a>
+          <a href="./gallery.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Gallery</a>
+          <a href="./blog.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Blog</a>
+          <a href="#" class="bg-brand-red text-white px-6 py-2 rounded-lg font-semibold hover:bg-brand-navy transition-colors w-full text-center">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="min-h-screen bg-white flex items-center justify-center">
+        <div class="text-center">
+          <h1 class="text-5xl md:text-7xl font-bold text-brand-navy mb-4">Contact Us</h1>
+          <p class="text-xl text-gray-600">Content coming soon...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-brand-navy text-white py-12">
+      <div class="max-w-screen-xl mx-auto px-6 text-center">
+        <p>&copy; 2026 NextGen Sports Nepal. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      document.querySelectorAll('#mobileMenu a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+    </script>
+  </body>
+</html>
