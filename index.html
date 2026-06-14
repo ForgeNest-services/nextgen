@@ -79,9 +79,10 @@
           <a href="./overview.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Overview</a>
           <a href="./services.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Programs</a>
           <a href="./gallery.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Gallery</a>
-          <a href="./blog.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Blog</a>
-          <a href="./contact.html" class="bg-brand-red text-white px-6 py-2 rounded-lg font-semibold hover:bg-brand-navy transition-colors w-full text-center">
-            Contact Us
+          <a href="./partners.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Partners</a>
+          <a href="./contact.html" class="group relative bg-brand-red text-white px-8 py-3 rounded-sm font-medium inline-flex items-center transition-all duration-300 overflow-hidden hover:bg-brand-red/90 w-full justify-center">
+            <span class="relative z-10">Contact Us</span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </a>
         </div>
       </div>
@@ -156,30 +157,88 @@
 
     <!-- Partners Section -->
     <section class="bg-white py-16 md:py-24">
-      <div class="px-6 md:px-12 mb-12 md:mb-16 flex flex-col md:flex-row md:items-start md:justify-between gap-8">
-        <!-- Title and Description (Left) -->
-        <div class="flex-1">
-          <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-4">Our Partners</h2>
-          <p class="text-gray-600 text-lg">
-            We collaborate with leading schools and institutions across Nepal to provide world-class sports training and development.
-          </p>
-        </div>
+      <div class="px-6 md:px-12">
+        <div class="max-w-6xl mx-auto">
+          <div class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+            <!-- Title and Description (Left) -->
+            <div class="flex-1">
+              <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-4">Our Partners</h2>
+              <p class="text-gray-600 text-lg">
+                We collaborate with leading schools and institutions across Nepal to provide world-class sports training and development.
+              </p>
+            </div>
 
-        <!-- View More Button (Right) -->
-        <div class="flex md:flex-col md:justify-start">
-          <a href="./partners.html" class="group relative px-6 py-3 bg-brand-red text-white font-medium inline-flex items-center gap-2 transition-all duration-300 overflow-hidden rounded-sm hover:bg-brand-red/90 text-sm md:text-base">
-            <span class="relative z-10">View All</span>
-            <iconify-icon icon="mdi:arrow-right" width="20" height="20" class="relative z-10"></iconify-icon>
-            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-          </a>
+            <!-- View More Button (Right) -->
+            <div class="flex md:flex-col md:justify-start">
+              <a href="./partners.html" class="group relative px-6 py-3 bg-brand-red text-white font-medium inline-flex items-center gap-2 transition-all duration-300 overflow-hidden rounded-sm hover:bg-brand-red/90 text-sm md:text-base">
+                <span class="relative z-10">View All</span>
+                <iconify-icon icon="mdi:arrow-right" width="20" height="20" class="relative z-10"></iconify-icon>
+                <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Carousel Container -->
+          <div class="relative overflow-hidden" id="carouselContainer">
+            <div id="partnersCarousel" class="flex gap-2 md:gap-3">
+              <!-- Partners will be injected here by JavaScript -->
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <div class="flex items-center justify-center gap-6 mt-8">
+            <button id="carouselPrev" class="flex items-center justify-center w-12 h-12 bg-brand-navy text-white rounded-full transition-all duration-300 hover:bg-brand-red">
+              <iconify-icon icon="mdi:chevron-left" width="28" height="28"></iconify-icon>
+            </button>
+            <button id="carouselNext" class="flex items-center justify-center w-12 h-12 bg-brand-navy text-white rounded-full transition-all duration-300 hover:bg-brand-red">
+              <iconify-icon icon="mdi:chevron-right" width="28" height="28"></iconify-icon>
+            </button>
+          </div>
         </div>
       </div>
+    </section>
 
+    <!-- About Us Section -->
+    <section class="bg-white py-16 md:py-24">
       <div class="px-6 md:px-12">
-        <!-- Carousel Container -->
-        <div class="relative overflow-hidden" id="carouselContainer">
-          <div id="partnersCarousel" class="flex gap-2 md:gap-3">
-            <!-- Partners will be injected here by JavaScript -->
+        <div class="max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+            <!-- Image -->
+            <div class="order-2 md:order-1">
+              <img src="./assets/about/image.png" alt="NextGen Sports Nepal" class="w-full h-full object-cover rounded-lg shadow-lg">
+            </div>
+
+            <!-- Content -->
+            <div class="order-1 md:order-2 flex flex-col justify-between">
+              <div>
+                <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-4">About NextGen Sports Nepal</h2>
+                <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                  Founded in 2026, NextGen Sports Nepal is dedicated to transforming the landscape of sports training and athlete development across Nepal. We partner with leading schools and sports associations to provide world-class training programs, professional coaching, and competitive pathways.
+                </p>
+              </div>
+
+              <!-- Stats Highlighted -->
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <!-- Partner Schools Card -->
+                <div class="bg-brand-navy rounded-lg p-6 text-white text-center">
+                  <div class="text-4xl font-semibold mb-2">
+                    <span id="partnerCounter">0</span><span>+</span>
+                  </div>
+                  <p class="font-medium">Partner Schools</p>
+                </div>
+                <!-- Sports Associations Card -->
+                <div class="bg-brand-blue rounded-lg p-6 text-white text-center">
+                  <div class="text-4xl font-semibold mb-2">3</div>
+                  <p class="font-medium">Sports Associations</p>
+                </div>
+              </div>
+
+              <!-- View More Button -->
+              <a href="./about.html" class="group relative px-8 py-3 bg-brand-red text-white font-medium inline-flex items-center transition-all duration-300 overflow-hidden rounded-sm hover:bg-brand-red/90 w-fit">
+                <span class="relative z-10">View More</span>
+                <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

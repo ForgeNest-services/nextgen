@@ -25,14 +25,14 @@
           <a href="mailto:nextgensportsnepal@gmail.com" class="hover:text-brand-red transition-colors">nextgensportsnepal@gmail.com</a>
         </div>
       </div>
-      <div class="flex items-center gap-2 text-white/60 text-xs">
+      <div class="flex items-center gap-2 text-white text-xs">
         <iconify-icon icon="mdi:map-marker" width="16" height="16"></iconify-icon>
         Dakshin Dhoka 4, Kathmandu
       </div>
     </div>
 
     <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-white relative" id="navbar">
+    <nav id="navbar" class="sticky top-0 z-50 bg-white relative">
       <div class="px-6 md:px-12 py-5 flex items-center justify-between">
         <div class="flex items-center">
           <a href="./index.html"><img src="./assets/logo.png" alt="NextGen Sports Nepal" class="h-14 w-auto" /></a>
@@ -43,39 +43,188 @@
           <a href="./overview.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Overview</a>
           <a href="./services.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Programs</a>
           <a href="./gallery.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Gallery</a>
-          <a href="./partners.html">Partners</a>
+          <a href="./partners.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Partners</a>
         </div>
         <div class="hidden md:block">
           <a href="./contact.html" class="group relative bg-brand-red text-white px-8 py-3 rounded-sm font-medium inline-flex items-center transition-all duration-300 overflow-hidden hover:bg-brand-red/90">
             <span class="relative z-10">Contact Us</span>
-            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span></a>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
         </div>
-        <button id="mobileMenuBtn" class="md:hidden flex flex-col space-y-1.5 focus:outline-none z-50 relative" id="mobileMenuBtn">
+        <button id="mobileMenuBtn" class="md:hidden flex flex-col space-y-1.5 focus:outline-none z-50 relative">
           <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
           <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
           <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
         </button>
       </div>
-      <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white max-h-0 overflow-hidden transition-all duration-300 ease-in-out" id="mobileMenu">
+      <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
         <div class="px-6 md:px-12 py-4 flex flex-col space-y-4">
           <a href="./index.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Home</a>
           <a href="#" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">About</a>
           <a href="./overview.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Overview</a>
           <a href="./services.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Programs</a>
           <a href="./gallery.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Gallery</a>
-          <a href="./partners.html">Partners</a>
+          <a href="./partners.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Partners</a>
           <a href="./contact.html" class="group relative bg-brand-red text-white px-8 py-3 rounded-sm font-medium inline-flex items-center transition-all duration-300 overflow-hidden hover:bg-brand-red/90 w-full justify-center">
             <span class="relative z-10">Contact Us</span>
-            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span></a>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
         </div>
       </div>
     </nav>
 
     <main>
-      <section class="min-h-screen bg-white flex items-center justify-center">
-        <div class="text-center">
-          <h1 class="text-5xl md:text-7xl font-bold text-brand-navy mb-4">About Us</h1>
-          <p class="text-xl text-gray-600">Content coming soon...</p>
+      <!-- Page Header -->
+      <section class="bg-gradient-to-br from-brand-navy to-brand-blue py-16 md:py-24">
+        <div class="px-6 md:px-12">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4">About Us</h1>
+          <p class="text-white/90 text-lg max-w-2xl">
+            Discover our story, mission, and commitment to developing Nepal's future athletes.
+          </p>
+        </div>
+      </section>
+
+      <!-- Our Story -->
+      <section class="bg-white py-16 md:py-24">
+        <div class="px-6 md:px-12">
+          <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
+              <!-- Image -->
+              <div>
+                <img src="./assets/about/image.png" alt="NextGen Sports Nepal" class="w-full h-full object-cover rounded-lg shadow-lg">
+              </div>
+              <!-- Content -->
+              <div class="flex flex-col justify-center">
+                <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-6">Our Story</h2>
+                <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                  NextGen Sports Nepal was founded in 2026 (2083 B.S.) with a singular vision: to transform the landscape of sports training and athlete development across Nepal. What started as a passion to nurture young talent has evolved into a comprehensive sports development organization serving schools and institutions nationwide.
+                </p>
+                <p class="text-gray-700 text-lg leading-relaxed">
+                  We believe that every young athlete deserves access to world-class training, professional coaching, and opportunities to compete at the highest levels. By partnering with leading educational institutions and sports associations, we've created pathways for Nepal's youth to excel both on and off the field.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission & Values -->
+      <section class="bg-gray-50 py-16 md:py-24">
+        <div class="px-6 md:px-12">
+          <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-4 text-center">Mission & Values</h2>
+            <p class="text-gray-700 text-lg text-center mb-12 max-w-2xl mx-auto">
+              Our core values guide every program, partnership, and decision we make.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Discipline Card -->
+              <div class="bg-white rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+                <div class="flex justify-center mb-4">
+                  <iconify-icon icon="mdi:target" width="48" height="48" class="text-brand-red"></iconify-icon>
+                </div>
+                <h3 class="text-2xl font-semibold text-brand-navy mb-3">Discipline</h3>
+                <p class="text-gray-600">
+                  We instill commitment, focus, and the mental strength required to overcome challenges and achieve excellence through consistent effort.
+                </p>
+              </div>
+
+              <!-- Teamwork Card -->
+              <div class="bg-white rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+                <div class="flex justify-center mb-4">
+                  <iconify-icon icon="mdi:people" width="48" height="48" class="text-brand-red"></iconify-icon>
+                </div>
+                <h3 class="text-2xl font-semibold text-brand-navy mb-3">Teamwork</h3>
+                <p class="text-gray-600">
+                  We believe in the power of collaboration. Athletes grow stronger when they work together, support one another, and celebrate shared victories.
+                </p>
+              </div>
+
+              <!-- Excellence Card -->
+              <div class="bg-white rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+                <div class="flex justify-center mb-4">
+                  <iconify-icon icon="mdi:star" width="48" height="48" class="text-brand-red"></iconify-icon>
+                </div>
+                <h3 class="text-2xl font-semibold text-brand-navy mb-3">Excellence</h3>
+                <p class="text-gray-600">
+                  We pursue the highest standards in coaching, training programs, and athlete development, never settling for mediocrity.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vision -->
+      <section class="bg-white py-16 md:py-24">
+        <div class="px-6 md:px-12">
+          <div class="max-w-3xl mx-auto border-l-4 border-brand-red pl-8">
+            <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-6">Our Vision</h2>
+            <p class="text-gray-700 text-lg leading-relaxed italic">
+              "To create an ecosystem where every young athlete in Nepal has access to professional sports training, mentorship, and competitive pathways—empowering them to achieve their dreams while representing Nepal on national and international stages."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partnerships -->
+      <section class="bg-gray-50 py-16 md:py-24">
+        <div class="px-6 md:px-12">
+          <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-4 text-center">Our Associations</h2>
+            <p class="text-gray-700 text-lg text-center mb-12 max-w-2xl mx-auto">
+              We partner with leading national sports organizations to deliver world-class programs.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Nepal Swimming Association -->
+              <div class="bg-white rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+                <div class="h-20 flex items-center justify-center mb-4">
+                  <iconify-icon icon="mdi:water" width="48" height="48" class="text-brand-blue"></iconify-icon>
+                </div>
+                <h3 class="text-xl font-semibold text-brand-navy mb-2">Nepal Swimming Association</h3>
+                <p class="text-gray-600">
+                  Leading the development of swimming excellence across Nepal with certified coaches and international standards.
+                </p>
+              </div>
+
+              <!-- UIPM Nepal -->
+              <div class="bg-white rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+                <div class="h-20 flex items-center justify-center mb-4">
+                  <iconify-icon icon="mdi:target-account" width="48" height="48" class="text-brand-blue"></iconify-icon>
+                </div>
+                <h3 class="text-xl font-semibold text-brand-navy mb-2">UIPM Nepal</h3>
+                <p class="text-gray-600">
+                  The Union Internationale de Pentathlon Moderne governing body, advancing shooting and sports excellence.
+                </p>
+              </div>
+
+              <!-- Nepal Fencing Association -->
+              <div class="bg-white rounded-lg p-8 text-center hover:shadow-lg transition-shadow">
+                <div class="h-20 flex items-center justify-center mb-4">
+                  <iconify-icon icon="mdi:sword" width="48" height="48" class="text-brand-blue"></iconify-icon>
+                </div>
+                <h3 class="text-xl font-semibold text-brand-navy mb-2">Nepal Fencing Association</h3>
+                <p class="text-gray-600">
+                  Promoting the discipline and artistry of fencing to Nepal's youth with international-level coaching.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="bg-brand-navy py-16 md:py-20">
+        <div class="px-6 md:px-12 text-center">
+          <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4">Ready to Join Our Mission?</h2>
+          <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            Get in touch with us to explore how NextGen Sports Nepal can help develop your school's athletic programs.
+          </p>
+          <a href="./contact.html" class="group relative bg-brand-red text-white px-8 py-3 rounded-sm font-medium inline-flex items-center transition-all duration-300 overflow-hidden hover:bg-brand-red/90">
+            <span class="relative z-10">Contact Us Today</span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
         </div>
       </section>
     </main>
@@ -86,10 +235,8 @@
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="./dist/index.js"></script>
   </body>
 </html>
-
-
-
-

@@ -76,6 +76,8 @@ if (mobileMenuBtn && mobileMenu) {
 function initPartnersCarousel() {
   const carousel = document.getElementById('partnersCarousel');
   const container = document.getElementById('carouselContainer');
+  const prevBtn = document.getElementById('carouselPrev');
+  const nextBtn = document.getElementById('carouselNext');
   if (!carousel || !container) return;
 
   fetch('./data/partners.json')
@@ -114,6 +116,7 @@ function initPartnersCarousel() {
       let scrollPos = 0;
       const speed = 0.5;
       const singleLoopWidth = carousel.scrollWidth / 2;
+      const cardWidth = 300; // Approximate width for navigation
       let isRunning = true;
       let animationInterval;
 
@@ -138,6 +141,30 @@ function initPartnersCarousel() {
         isRunning = true;
       });
 
+      // Manual navigation
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+          isRunning = false;
+          scrollPos = Math.max(0, scrollPos - cardWidth);
+          carousel.style.transform = `translateX(-${scrollPos}px)`;
+          setTimeout(() => {
+            isRunning = true;
+          }, 500);
+        });
+
+        nextBtn.addEventListener('click', () => {
+          isRunning = false;
+          scrollPos += cardWidth;
+          if (scrollPos >= singleLoopWidth) {
+            scrollPos = 0;
+          }
+          carousel.style.transform = `translateX(-${scrollPos}px)`;
+          setTimeout(() => {
+            isRunning = true;
+          }, 500);
+        });
+      }
+
       startAnimation();
     })
     .catch(error => console.error('Error loading partners:', error));
@@ -147,4 +174,33 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initPartnersCarousel);
 } else {
   initPartnersCarousel();
+}
+
+// Partner Counter Animation
+function initCounterAnimation() {
+  const counter = document.getElementById('partnerCounter');
+  if (!counter) return;
+
+  let hasAnimated = false;
+
+  ScrollTrigger.create({
+    trigger: counter,
+    onEnter: () => {
+      if (!hasAnimated) {
+        hasAnimated = true;
+        gsap.to(counter, {
+          textContent: 50,
+          duration: 2,
+          ease: 'power2.out',
+          snap: { textContent: 1 }
+        });
+      }
+    }
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCounterAnimation);
+} else {
+  initCounterAnimation();
 }
