@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Kathmandu Model School",
+    "logo": "https://dummyimage.com/120x120/002250/ffffff&text=KMS",
+    "image": "https://dummyimage.com/400x300/002250/ffffff&text=Kathmandu+Model",
+    "description": "Leading educational institution in Kathmandu, committed to developing well-rounded athletes."
+  },
+  {
+    "id": 2,
+    "name": "Adarsha Vidya Niketan",
+    "logo": "https://dummyimage.com/120x120/C41230/ffffff&text=AVN",
+    "image": "https://dummyimage.com/400x300/C41230/ffffff&text=Adarsha+Vidya",
+    "description": "Pioneering school in sports education with state-of-the-art training facilities."
+  },
+  {
+    "id": 3,
+    "name": "Summit Valley School",
+    "logo": "https://dummyimage.com/120x120/004091/ffffff&text=SVS",
+    "image": "https://dummyimage.com/400x300/004091/ffffff&text=Summit+Valley",
+    "description": "Dedicated to nurturing young talent with comprehensive sports development programs."
+  },
+  {
+    "id": 4,
+    "name": "Nepal Academy of Excellence",
+    "logo": "https://dummyimage.com/120x120/002250/ffffff&text=NAE",
+    "image": "https://dummyimage.com/400x300/002250/ffffff&text=Nepal+Academy",
+    "description": "Premier institution focused on athlete development and academic excellence programs."
+  },
+  {
+    "id": 5,
+    "name": "Golden Gate International",
+    "logo": "https://dummyimage.com/120x120/C41230/ffffff&text=GGI",
+    "image": "https://dummyimage.com/400x300/C41230/ffffff&text=Golden+Gate",
+    "description": "International standard facilities for training the next generation of champions."
+  },
+  {
+    "id": 6,
+    "name": "Shining Stars Academy",
+    "logo": "https://dummyimage.com/120x120/004091/ffffff&text=SSA",
+    "image": "https://dummyimage.com/400x300/004091/ffffff&text=Shining+Stars",
+    "description": "Innovative approach to sports training with focus on holistic development."
+  }
+]

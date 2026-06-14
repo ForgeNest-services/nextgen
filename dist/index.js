@@ -70,5 +70,81 @@ if (mobileMenuBtn && mobileMenu) {
       }
     });
   });
+}
 
+// Partners Carousel Auto-Loop
+function initPartnersCarousel() {
+  const carousel = document.getElementById('partnersCarousel');
+  const container = document.getElementById('carouselContainer');
+  if (!carousel || !container) return;
+
+  fetch('./data/partners.json')
+    .then(response => response.json())
+    .then(partners => {
+      // Create partner cards using safe DOM methods
+      partners.forEach(partner => {
+        const card = document.createElement('div');
+        card.className = 'flex-shrink-0 w-full md:w-1/3 lg:w-1/4';
+
+        const cardInner = document.createElement('div');
+        cardInner.className = 'bg-gray-50 rounded-lg p-5 flex flex-col items-center justify-center h-32 hover:shadow-lg transition-shadow min-w-max';
+
+        const img = document.createElement('img');
+        img.src = partner.logo;
+        img.alt = partner.name;
+        img.className = 'h-24 w-auto mb-2 object-contain';
+
+        const name = document.createElement('p');
+        name.className = 'text-sm font-medium text-center text-gray-800';
+        name.textContent = partner.name;
+
+        cardInner.appendChild(img);
+        cardInner.appendChild(name);
+        card.appendChild(cardInner);
+
+        carousel.appendChild(card);
+      });
+
+      // Duplicate cards for seamless loop
+      const cards = carousel.querySelectorAll('div.flex-shrink-0');
+      const clonedCards = Array.from(cards).map(card => card.cloneNode(true));
+      clonedCards.forEach(card => carousel.appendChild(card));
+
+      // Auto-scroll animation
+      let scrollPos = 0;
+      const speed = 0.5;
+      const singleLoopWidth = carousel.scrollWidth / 2;
+      let isRunning = true;
+      let animationInterval;
+
+      function startAnimation() {
+        animationInterval = setInterval(() => {
+          if (isRunning) {
+            scrollPos += speed;
+            if (scrollPos >= singleLoopWidth) {
+              scrollPos = 0;
+            }
+            carousel.style.transform = `translateX(-${scrollPos}px)`;
+          }
+        }, 30);
+      }
+
+      // Pause on hover
+      container.addEventListener('mouseenter', () => {
+        isRunning = false;
+      });
+
+      container.addEventListener('mouseleave', () => {
+        isRunning = true;
+      });
+
+      startAnimation();
+    })
+    .catch(error => console.error('Error loading partners:', error));
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPartnersCarousel);
+} else {
+  initPartnersCarousel();
 }
