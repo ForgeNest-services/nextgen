@@ -31,14 +31,14 @@
           <a href="mailto:nextgensportsnepal@gmail.com" class="hover:text-brand-red transition-colors">nextgensportsnepal@gmail.com</a>
         </div>
       </div>
-      <div class="flex items-center gap-2 text-white/60 text-xs">
+      <div class="flex items-center gap-2 text-white text-xs">
         <iconify-icon icon="mdi:map-marker" width="16" height="16"></iconify-icon>
         Dakshin Dhoka 4, Kathmandu
       </div>
     </div>
 
     <!-- Navbar -->
-    <nav id="navbar" class="sticky top-0 z-50 bg-white">
+    <nav id="navbar" class="sticky top-0 z-50 bg-white relative">
       <div class="px-6 md:px-12 py-5 flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center">
@@ -64,7 +64,7 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <button id="mobileMenuBtn" class="md:hidden flex flex-col space-y-1.5 focus:outline-none">
+        <button id="mobileMenuBtn" class="md:hidden flex flex-col space-y-1.5 focus:outline-none z-50 relative">
           <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
           <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
           <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
@@ -72,7 +72,7 @@
       </div>
 
       <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden md:hidden bg-white max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+      <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
         <div class="px-6 md:px-12 py-4 flex flex-col space-y-4">
           <a href="#" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Home</a>
           <a href="./about.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">About</a>

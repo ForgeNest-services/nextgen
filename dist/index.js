@@ -71,11 +71,4 @@ if (mobileMenuBtn && mobileMenu) {
     });
   });
 
-  // Update menu height on window resize
-  window.addEventListener('resize', () => {
-    if (!mobileMenu.classList.contains('hidden')) {
-      const menuHeight = mobileMenu.scrollHeight;
-      mobileMenu.style.maxHeight = menuHeight + 'px';
-    }
-  });
 }
