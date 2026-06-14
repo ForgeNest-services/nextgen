@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "slug": "training-development",
+    "title": "Training & Development",
+    "description": "Professional coaching and mentorship programs designed to unlock the potential of every young athlete. Our certified coaches provide structured training in swimming, fencing, athletics, and other disciplines, tailored for all skill levels.",
+    "image": "./assets/overview/overview-2.jpeg",
+    "imageAlt": "Training & Development",
+    "features": [
+      "Professional Coaching",
+      "Structured Programs",
+      "Multi-Sport Options",
+      "Skill Development"
+    ],
+    "backgroundColor": "bg-brand-navy"
+  },
+  {
+    "id": 2,
+    "slug": "competitive-training",
+    "title": "Competitive Training",
+    "description": "Once fundamentals are mastered, athletes transition to competitive training. This phase focuses on technical refinement, tactical awareness, and mental preparation for real competition. Athletes train alongside peers, participate in regular tournaments, and develop competitive spirit.",
+    "image": "./assets/overview/overview-3.jpeg",
+    "imageAlt": "Competitive Training",
+    "features": [
+      "Advanced Techniques",
+      "Tactical Training",
+      "Regular Tournaments",
+      "Peer Competition"
+    ],
+    "backgroundColor": "bg-brand-blue"
+  },
+  {
+    "id": 3,
+    "slug": "excellence-achievement",
+    "title": "Excellence & Achievement",
+    "description": "Our athletes achieve recognition through medals, scholarships, and accolades. We celebrate every milestone, from first competition to national championship. This phase recognizes dedication and creates pathways for continued advancement at elite levels.",
+    "image": "./assets/overview/overview-1.jpeg",
+    "imageAlt": "Excellence & Achievement",
+    "features": [
+      "Medal Recognition",
+      "Scholarship Programs",
+      "Leadership Development",
+      "Awards & Honors"
+    ],
+    "backgroundColor": "bg-brand-navy"
+  },
+  {
+    "id": 4,
+    "slug": "championship-international",
+    "title": "Championship & International Pathways",
+    "description": "Elite athletes progress to national championships and international competitions. We provide pathways for representation at the highest levels of sport, preparing athletes to compete with the best and represent Nepal with pride on global stages.",
+    "image": "./assets/overview/overview-4.jpeg",
+    "imageAlt": "Championship & International",
+    "features": [
+      "National Championships",
+      "International Competitions",
+      "Elite Training",
+      "Global Recognition"
+    ],
+    "backgroundColor": "bg-brand-blue"
+  }
+]

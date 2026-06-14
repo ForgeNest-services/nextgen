@@ -407,6 +407,9 @@
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
   }
+  .min-h-70 {
+    min-height: calc(var(--spacing) * 70);
+  }
   .min-h-\[280px\] {
     min-height: 280px;
   }
@@ -471,6 +474,9 @@
     flex-shrink: 1;
   }
   .flex-shrink-0 {
+    flex-shrink: 0;
+  }
+  .shrink-0 {
     flex-shrink: 0;
   }
   .flex-grow {
@@ -977,6 +983,16 @@
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
   }
+  .group-hover\:scale-105 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-scale-x: 105%;
+        --tw-scale-y: 105%;
+        --tw-scale-z: 105%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
   .group-hover\:scale-110 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1002,6 +1018,13 @@
         @supports (color: color-mix(in lab, red, red)) {
           background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
         }
+      }
+    }
+  }
+  .group-hover\:text-brand-red {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-brand-red);
       }
     }
   }
