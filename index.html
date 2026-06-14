@@ -38,7 +38,7 @@
     </div>
 
     <!-- Navbar -->
-    <nav id="navbar" class="sticky top-0 z-50 bg-white relative">
+    <nav id="navbar" class="sticky top-0 z-50 bg-white">
       <div class="px-6 md:px-12 py-5 flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center">
@@ -203,16 +203,26 @@
       <div class="px-6 md:px-12">
         <div class="max-w-6xl mx-auto">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
-            <!-- Image -->
-            <div class="order-2 md:order-1">
+            <!-- Image (Desktop: left, Mobile: after title) -->
+            <div class="hidden md:block order-2 md:order-1">
               <img src="./assets/about/image.png" alt="NextGen Sports Nepal" class="w-full h-full object-cover rounded-lg shadow-lg">
             </div>
 
             <!-- Content -->
             <div class="order-1 md:order-2 flex flex-col justify-between">
+              <!-- Title -->
               <div>
-                <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-4">About NextGen Sports Nepal</h2>
-                <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-4 md:mb-6">About NextGen Sports Nepal</h2>
+              </div>
+
+              <!-- Image for Mobile (appears after title) -->
+              <div class="block md:hidden mb-6">
+                <img src="./assets/about/image.png" alt="NextGen Sports Nepal" class="w-full h-auto object-cover rounded-lg shadow-lg">
+              </div>
+
+              <!-- Description -->
+              <div class="mb-6">
+                <p class="text-gray-700 text-lg leading-relaxed">
                   Founded in 2026, NextGen Sports Nepal is dedicated to transforming the landscape of sports training and athlete development across Nepal. We partner with leading schools and sports associations to provide world-class training programs, professional coaching, and competitive pathways.
                 </p>
               </div>
