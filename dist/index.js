@@ -1,33 +1,46 @@
 // Mobile Menu Toggle with Smooth Animation
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
+const lines = mobileMenuBtn.querySelectorAll('span');
+
+let isMenuOpen = false;
+
+function toggleMenu() {
+  isMenuOpen = !isMenuOpen;
+
+  if (isMenuOpen) {
+    // Open menu
+    mobileMenu.classList.remove('hidden');
+    const menuHeight = mobileMenu.scrollHeight;
+    mobileMenu.style.maxHeight = menuHeight + 'px';
+
+    // Animate hamburger to X
+    lines[0].style.transform = 'rotate(45deg) translate(8px, 8px)';
+    lines[1].style.opacity = '0';
+    lines[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+  } else {
+    // Close menu
+    mobileMenu.style.maxHeight = '0px';
+    setTimeout(() => {
+      mobileMenu.classList.add('hidden');
+    }, 300);
+
+    // Reset hamburger to normal
+    lines[0].style.transform = 'none';
+    lines[1].style.opacity = '1';
+    lines[2].style.transform = 'none';
+  }
+}
 
 if (mobileMenuBtn && mobileMenu) {
-  mobileMenuBtn.addEventListener('click', () => {
-    const isHidden = mobileMenu.classList.contains('hidden');
-
-    if (isHidden) {
-      // Open menu
-      mobileMenu.classList.remove('hidden');
-      // Get the actual height of the menu content
-      const menuHeight = mobileMenu.scrollHeight;
-      mobileMenu.style.maxHeight = menuHeight + 'px';
-    } else {
-      // Close menu
-      mobileMenu.style.maxHeight = '0px';
-      setTimeout(() => {
-        mobileMenu.classList.add('hidden');
-      }, 300); // Match the CSS transition duration
-    }
-  });
+  mobileMenuBtn.addEventListener('click', toggleMenu);
 
   // Close menu when a link is clicked
   document.querySelectorAll('#mobileMenu a').forEach(link => {
     link.addEventListener('click', () => {
-      mobileMenu.style.maxHeight = '0px';
-      setTimeout(() => {
-        mobileMenu.classList.add('hidden');
-      }, 300);
+      if (isMenuOpen) {
+        toggleMenu();
+      }
     });
   });
 
@@ -37,24 +50,5 @@ if (mobileMenuBtn && mobileMenu) {
       const menuHeight = mobileMenu.scrollHeight;
       mobileMenu.style.maxHeight = menuHeight + 'px';
     }
-  });
-}
-
-// Hamburger Icon Animation (rotate lines on toggle)
-if (mobileMenuBtn) {
-  const lines = mobileMenuBtn.querySelectorAll('span');
-  mobileMenuBtn.addEventListener('click', () => {
-    lines.forEach((line, index) => {
-      if (mobileMenu.classList.contains('hidden')) {
-        // Reset animation
-        line.style.transform = 'none';
-        line.style.opacity = '1';
-      } else {
-        // Animate hamburger to X
-        if (index === 0) line.style.transform = 'rotate(45deg) translate(8px, 8px)';
-        if (index === 1) line.style.opacity = '0';
-        if (index === 2) line.style.transform = 'rotate(-45deg) translate(7px, -7px)';
-      }
-    });
   });
 }
