@@ -211,3 +211,34 @@ if (document.readyState === 'loading') {
 } else {
   initCounterAnimation();
 }
+
+// FAQ Accordion
+function initFAQ() {
+  const faqToggles = document.querySelectorAll('.faq-toggle');
+
+  faqToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const faqContent = toggle.nextElementSibling;
+      const icon = toggle.querySelector('.faq-icon');
+      const isOpen = !faqContent.classList.contains('hidden');
+
+      // Close all other FAQs
+      document.querySelectorAll('.faq-content').forEach(content => {
+        if (content !== faqContent) {
+          content.classList.add('hidden');
+          content.previousElementSibling.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+        }
+      });
+
+      // Toggle current FAQ
+      faqContent.classList.toggle('hidden');
+      icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initFAQ);
+} else {
+  initFAQ();
+}
