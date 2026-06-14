@@ -1,3 +1,30 @@
+// Hero Section Animation on Page Load
+gsap.registerPlugin(ScrollTrigger);
+
+window.addEventListener('load', () => {
+  // Fade in hero section
+  gsap.fromTo(
+    'section:first-child',
+    { opacity: 0 },
+    { opacity: 1, duration: 0.6, ease: 'power2.out' }
+  );
+});
+
+// Top Bar & Navbar Scroll Behavior
+const topBar = document.querySelector('body > div:first-child');
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+  if (topBar) {
+    const topBarHeight = topBar.offsetHeight;
+    if (window.scrollY >= topBarHeight) {
+      navbar.style.top = '0';
+    } else {
+      navbar.style.top = (topBarHeight - window.scrollY) + 'px';
+    }
+  }
+});
+
 // Mobile Menu Toggle with Smooth Animation
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');

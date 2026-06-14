@@ -16,10 +16,29 @@
     <meta property="og:url" content="https://www.nextgensports.com.np/" />
 
     <link rel="stylesheet" href="./dist/output.css" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
   </head>
   <body>
+    <!-- Top Notice Bar -->
+    <div class="bg-brand-navy text-white px-6 md:px-12 py-3 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <div class="flex items-center gap-2">
+          <iconify-icon icon="mdi:phone" width="18" height="18"></iconify-icon>
+          <a href="tel:9766517901" class="hover:text-brand-red transition-colors">9766517901</a>
+        </div>
+        <div class="hidden md:flex items-center gap-2">
+          <iconify-icon icon="mdi:email" width="18" height="18"></iconify-icon>
+          <a href="mailto:nextgensportsnepal@gmail.com" class="hover:text-brand-red transition-colors">nextgensportsnepal@gmail.com</a>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 text-white/60 text-xs">
+        <iconify-icon icon="mdi:map-marker" width="16" height="16"></iconify-icon>
+        Dakshin Dhoka 4, Kathmandu
+      </div>
+    </div>
+
     <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-white">
+    <nav id="navbar" class="sticky top-0 z-50 bg-white">
       <div class="px-6 md:px-12 py-5 flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center">
@@ -38,8 +57,9 @@
 
         <!-- Desktop CTA -->
         <div class="hidden md:block">
-          <a href="./contact.html" class="bg-brand-red text-white px-6 py-2 rounded-lg font-medium hover:bg-brand-navy transition-colors">
-            Contact Us
+          <a href="./contact.html" class="group relative bg-brand-red text-white px-8 py-3 rounded-sm font-medium inline-flex items-center transition-all duration-300 overflow-hidden hover:bg-brand-red/90">
+            <span class="relative z-10">Contact Us</span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </a>
         </div>
 
@@ -69,14 +89,70 @@
 
     <!-- Main Content -->
     <main>
-      <!-- Hero Section (placeholder) -->
-      <section class="min-h-screen bg-white flex items-center justify-center">
-        <div class="text-center">
-          <h1 class="text-5xl md:text-7xl font-bold text-brand-navy mb-4">Coming Soon</h1>
-          <p class="text-xl text-gray-600">Hero section and content coming soon...</p>
+      <!-- Hero Section -->
+      <section class="relative w-full h-screen flex items-center justify-center overflow-hidden bg-brand-navy">
+        <!-- Background Image with Sophisticated Gradient Overlay -->
+        <div class="absolute inset-0">
+          <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/hero/image.png');"></div>
+          <!-- Multi-layered gradient overlay for depth -->
+          <div class="absolute inset-0 bg-gradient-to-br from-brand-navy/70 via-brand-navy/60 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/80 to-transparent"></div>
+          <!-- Subtle accent overlay in bottom right -->
+          <div class="absolute bottom-0 right-0 w-96 h-96 bg-brand-blue/10 blur-3xl"></div>
+        </div>
+
+        <!-- Decorative Accent Elements -->
+        <div class="absolute top-20 right-10 w-1 h-32 bg-brand-red/30 hidden md:block" style="animation: slideIn 1s ease-out 0.4s both;"></div>
+        <div class="absolute bottom-32 left-8 w-0.5 h-24 bg-brand-blue/40 hidden md:block" style="animation: slideIn 1s ease-out 0.6s both;"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 px-6 md:px-12 text-center max-w-4xl">
+          <h1 class="text-5xl md:text-7xl lg:text-8xl font-semibold text-white mb-6 leading-tight">
+            Fueling the Future of Nepal's Athletes
+          </h1>
+          <p class="text-lg md:text-xl text-white/90 mb-10 font-light">
+            Discover. Develop. Excel. — Professional sports training and athlete development programs for schools across Nepal.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+            <a href="#about" class="group relative px-8 py-3.5 bg-brand-red text-white font-medium inline-flex items-center transition-all duration-300 overflow-hidden rounded-sm hover:bg-brand-red/90">
+              <span class="relative z-10">Explore Programs</span>
+              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+            </a>
+            <a href="./contact.html" class="group relative px-8 py-3.5 border-2 border-white text-white font-medium inline-flex items-center transition-all duration-300 rounded-sm hover:bg-white/10">
+              <span class="relative z-10">Contact Us</span>
+              <span class="absolute inset-0 bg-white opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-sm"></span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
+
+    <style>
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: scaleY(0);
+          transform-origin: top;
+        }
+        to {
+          opacity: 1;
+          transform: scaleY(1);
+        }
+      }
+    </style>
 
     <!-- Footer (placeholder) -->
     <footer class="bg-brand-navy text-white py-12">
