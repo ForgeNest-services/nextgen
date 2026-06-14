@@ -407,6 +407,12 @@
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
   }
+  .min-h-\[280px\] {
+    min-height: 280px;
+  }
+  .min-h-\[500px\] {
+    min-height: 500px;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
@@ -602,6 +608,9 @@
     border-left-style: var(--tw-border-style);
     border-left-width: 4px;
   }
+  .border-brand-navy {
+    border-color: var(--color-brand-navy);
+  }
   .border-brand-navy\/10 {
     border-color: color-mix(in srgb, #002250 10%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -616,6 +625,9 @@
   }
   .border-white {
     border-color: var(--color-white);
+  }
+  .bg-black {
+    background-color: var(--color-black);
   }
   .bg-black\/0 {
     background-color: color-mix(in srgb, #000 0%, transparent);
@@ -1135,6 +1147,11 @@
   .md\:hidden {
     @media (width >= 48rem) {
       display: none;
+    }
+  }
+  .md\:min-h-\[600px\] {
+    @media (width >= 48rem) {
+      min-height: 600px;
     }
   }
   .md\:w-1\/3 {
