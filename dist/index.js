@@ -1,13 +1,17 @@
 // Hero Section Animation on Page Load
-gsap.registerPlugin(ScrollTrigger);
+if (typeof gsap !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 window.addEventListener('load', () => {
   // Fade in hero section
-  gsap.fromTo(
-    'section:first-child',
-    { opacity: 0 },
-    { opacity: 1, duration: 0.6, ease: 'power2.out' }
-  );
+  if (typeof gsap !== 'undefined') {
+    gsap.fromTo(
+      'section:first-child',
+      { opacity: 0 },
+      { opacity: 1, duration: 0.6, ease: 'power2.out' }
+    );
+  }
 });
 
 // Top Bar & Navbar Scroll Behavior
@@ -38,8 +42,11 @@ function toggleMenu() {
   if (isMenuOpen) {
     // Open menu
     mobileMenu.classList.remove('hidden');
-    const menuHeight = mobileMenu.scrollHeight;
-    mobileMenu.style.maxHeight = menuHeight + 'px';
+    // Use requestAnimationFrame to ensure the DOM has updated before calculating height
+    requestAnimationFrame(() => {
+      const menuHeight = mobileMenu.scrollHeight;
+      mobileMenu.style.maxHeight = menuHeight + 'px';
+    });
 
     // Animate hamburger to X
     lines[0].style.transform = 'rotate(45deg) translate(8px, 8px)';
@@ -179,7 +186,7 @@ if (document.readyState === 'loading') {
 // Partner Counter Animation
 function initCounterAnimation() {
   const counter = document.getElementById('partnerCounter');
-  if (!counter) return;
+  if (!counter || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
   let hasAnimated = false;
 
