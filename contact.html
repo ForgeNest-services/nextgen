@@ -8,7 +8,6 @@
     <title>Contact Us - NextGen Sports Nepal</title>
     <link rel="canonical" href="https://www.nextgensports.com.np/contact" />
     <link rel="stylesheet" href="./dist/output.css" />
-  </head>
     <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
   </head>
   <body>
@@ -16,15 +15,15 @@
     <div class="bg-brand-navy text-white px-6 md:px-12 py-3 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
       <div class="flex flex-col md:flex-row items-center gap-6">
         <div class="flex items-center gap-2">
-          <span>📞</span>
+          <iconify-icon icon="mdi:phone" width="18" height="18"></iconify-icon>
           <a href="tel:9766517901" class="hover:text-brand-red transition-colors">9766517901</a>
         </div>
         <div class="hidden md:flex items-center gap-2">
-          <span>✉️</span>
+          <iconify-icon icon="mdi:email" width="18" height="18"></iconify-icon>
           <a href="mailto:nextgensportsnepal@gmail.com" class="hover:text-brand-red transition-colors">nextgensportsnepal@gmail.com</a>
         </div>
       </div>
-      <div class="flex items-center gap-2 text-white/60 text-xs">
+      <div class="flex items-center gap-2 text-white text-xs">
         <iconify-icon icon="mdi:map-marker" width="16" height="16"></iconify-icon>
         Dakshin Dhoka 4, Kathmandu
       </div>
@@ -41,7 +40,7 @@
           <a href="./overview.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Overview</a>
           <a href="./services.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Programs</a>
           <a href="./gallery.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Gallery</a>
-          <a href="./partners.html">Partners</a>
+          <a href="./partners.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Partners</a>
         </div>
         <div class="hidden md:block">
           <a href="#" class="group relative bg-brand-red text-white px-8 py-3 rounded-sm font-medium inline-flex items-center transition-all duration-300 overflow-hidden hover:bg-brand-red/90">
@@ -49,30 +48,235 @@
             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
           </a>
         </div>
-        <button id="mobileMenuBtn" class="md:hidden flex flex-col space-y-1.5 focus:outline-none z-50 relative" id="mobileMenuBtn">
+        <button id="mobileMenuBtn" class="md:hidden flex flex-col space-y-1.5 focus:outline-none z-50 relative">
           <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
           <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
           <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
         </button>
       </div>
-      <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white max-h-0 overflow-hidden transition-all duration-300 ease-in-out" id="mobileMenu">
+      <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
         <div class="px-6 md:px-12 py-4 flex flex-col space-y-4">
           <a href="./index.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Home</a>
           <a href="./about.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">About</a>
           <a href="./overview.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Overview</a>
           <a href="./services.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Programs</a>
           <a href="./gallery.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Gallery</a>
-          <a href="./partners.html">Partners</a>
-          <a href="#" class="bg-brand-red text-white px-6 py-2 rounded-lg font-semibold hover:bg-brand-navy transition-colors w-full text-center">Contact Us</a>
+          <a href="./partners.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Partners</a>
+          <a href="#" class="group relative bg-brand-red text-white px-8 py-3 rounded-sm font-medium inline-flex items-center transition-all duration-300 overflow-hidden hover:bg-brand-red/90 w-full justify-center">
+            <span class="relative z-10">Contact Us</span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
         </div>
       </div>
     </nav>
 
     <main>
-      <section class="min-h-screen bg-white flex items-center justify-center">
-        <div class="text-center">
-          <h1 class="text-5xl md:text-7xl font-bold text-brand-navy mb-4">Contact Us</h1>
-          <p class="text-xl text-gray-600">Content coming soon...</p>
+      <!-- Page Header -->
+      <section class="bg-gradient-to-br from-brand-navy to-brand-blue py-8 md:py-12">
+        <div class="px-6 md:px-12">
+          <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+              <!-- Left Content -->
+              <div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4">Get In Touch</h1>
+                <p class="text-white/90 text-lg mb-6">
+                  Have questions about our programs? We'd love to hear from you. Reach out anytime.
+                </p>
+                <!-- Breadcrumb -->
+                <nav class="flex items-center gap-2 text-sm" aria-label="Breadcrumb">
+                  <a href="./index.html" class="text-white/80 hover:text-white transition-colors">Home</a>
+                  <span class="text-white/60">/</span>
+                  <span class="text-white/80">Contact</span>
+                </nav>
+              </div>
+
+              <!-- Right Illustration -->
+              <div class="hidden md:flex justify-end items-center">
+                <img src="./assets/illustrations/test.png" alt="Athlete" class="w-56 h-auto opacity-90">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="bg-white py-16 md:py-24">
+        <div class="px-6 md:px-12">
+          <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+              <!-- Contact Information -->
+              <div>
+                <h2 class="text-3xl font-semibold text-brand-navy mb-8">Contact Information</h2>
+
+                <!-- Phone -->
+                <div class="mb-8 flex gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-red text-white">
+                      <iconify-icon icon="mdi:phone" width="24" height="24"></iconify-icon>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-brand-navy mb-1">Phone</h3>
+                    <a href="tel:9766517901" class="text-gray-600 hover:text-brand-red transition-colors">
+                      9766517901
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-8 flex gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-red text-white">
+                      <iconify-icon icon="mdi:email" width="24" height="24"></iconify-icon>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-brand-navy mb-1">Email</h3>
+                    <a href="mailto:nextgensportsnepal@gmail.com" class="text-gray-600 hover:text-brand-red transition-colors">
+                      nextgensportsnepal@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Location -->
+                <div class="mb-8 flex gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-red text-white">
+                      <iconify-icon icon="mdi:map-marker" width="24" height="24"></iconify-icon>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-brand-navy mb-1">Address</h3>
+                    <p class="text-gray-600">
+                      Dakshin Dhoka 4<br>
+                      Kathmandu, Nepal
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Website -->
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-red text-white">
+                      <iconify-icon icon="mdi:globe" width="24" height="24"></iconify-icon>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-brand-navy mb-1">Website</h3>
+                    <p class="text-gray-600">
+                      www.nextgensports.com.np
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Form -->
+              <div class="lg:col-span-2">
+                <h2 class="text-3xl font-semibold text-brand-navy mb-8">Send us a Message</h2>
+                <form id="contactForm" class="space-y-6">
+                  <!-- Name -->
+                  <div>
+                    <label for="name" class="block text-sm font-medium text-brand-navy mb-2">Full Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red"
+                      placeholder="Your full name"
+                    />
+                  </div>
+
+                  <!-- Email -->
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-brand-navy mb-2">Email Address</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+
+                  <!-- Phone -->
+                  <div>
+                    <label for="phone" class="block text-sm font-medium text-brand-navy mb-2">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red"
+                      placeholder="9xxxxxxxxx"
+                    />
+                  </div>
+
+                  <!-- Subject -->
+                  <div>
+                    <label for="subject" class="block text-sm font-medium text-brand-navy mb-2">Subject</label>
+                    <select
+                      id="subject"
+                      name="subject"
+                      required
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red"
+                    >
+                      <option value="">Select a subject</option>
+                      <option value="enrollment">Enrollment Inquiry</option>
+                      <option value="partnership">Partnership Opportunity</option>
+                      <option value="general">General Question</option>
+                      <option value="feedback">Feedback</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <!-- Message -->
+                  <div>
+                    <label for="message" class="block text-sm font-medium text-brand-navy mb-2">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      required
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red"
+                      placeholder="Tell us more about your inquiry..."
+                    ></textarea>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <button
+                    type="submit"
+                    class="group relative w-full bg-brand-red text-white px-8 py-3 rounded-sm font-medium inline-flex items-center justify-center transition-all duration-300 overflow-hidden hover:bg-brand-red/90"
+                  >
+                    <span class="relative z-10">Send Message</span>
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                  </button>
+
+                  <!-- Form Message -->
+                  <div id="formMessage" class="hidden p-4 rounded-lg text-sm font-medium"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Map Section (Placeholder) -->
+      <section class="bg-gray-50 py-16 md:py-24">
+        <div class="px-6 md:px-12">
+          <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-semibold text-brand-navy mb-8 text-center">Our Location</h2>
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg h-96">
+              <iframe
+                width="100%"
+                height="100%"
+                style="border: 0"
+                loading="lazy"
+                allowfullscreen=""
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2831928815434!2d85.30949731492254!3d27.71668487613507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198c8c8c8c8d%3A0x8c8c8c8c8c8c8c8c!2sDakshin%20Dhoka%204%2C%20Kathmandu!5e0!3m2!1sen!2snp!4v1234567890"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -84,12 +288,53 @@
     </footer>
 
     <script src="./dist/index.js"></script>
+    <script>
+      const contactForm = document.getElementById('contactForm');
+      const formMessage = document.getElementById('formMessage');
+
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        // Simple validation
+        if (!name || !email || !subject || !message) {
+          showMessage('Please fill in all required fields.', 'error');
+          return;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          showMessage('Please enter a valid email address.', 'error');
+          return;
+        }
+
+        // Simulate form submission
+        showMessage('Thank you for your message! We will get back to you soon.', 'success');
+        contactForm.reset();
+
+        // Clear message after 5 seconds
+        setTimeout(() => {
+          formMessage.classList.add('hidden');
+        }, 5000);
+      });
+
+      function showMessage(text, type) {
+        formMessage.textContent = text;
+        formMessage.classList.remove('hidden');
+        formMessage.classList.remove('bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+
+        if (type === 'success') {
+          formMessage.classList.add('bg-green-100', 'text-green-800');
+        } else {
+          formMessage.classList.add('bg-red-100', 'text-red-800');
+        }
+      }
+    </script>
   </body>
 </html>
-
-
-
-
-
-
-

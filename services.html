@@ -15,15 +15,15 @@
     <div class="bg-brand-navy text-white px-6 md:px-12 py-3 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
       <div class="flex flex-col md:flex-row items-center gap-6">
         <div class="flex items-center gap-2">
-          <span>📞</span>
+          <iconify-icon icon="mdi:phone" width="18" height="18"></iconify-icon>
           <a href="tel:9766517901" class="hover:text-brand-red transition-colors">9766517901</a>
         </div>
         <div class="hidden md:flex items-center gap-2">
-          <span>✉️</span>
+          <iconify-icon icon="mdi:email" width="18" height="18"></iconify-icon>
           <a href="mailto:nextgensportsnepal@gmail.com" class="hover:text-brand-red transition-colors">nextgensportsnepal@gmail.com</a>
         </div>
       </div>
-      <div class="flex items-center gap-2 text-white/60 text-xs">
+      <div class="flex items-center gap-2 text-white text-xs">
         <iconify-icon icon="mdi:map-marker" width="16" height="16"></iconify-icon>
         Dakshin Dhoka 4, Kathmandu
       </div>
@@ -40,37 +40,285 @@
           <a href="./overview.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Overview</a>
           <a href="#" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Programs</a>
           <a href="./gallery.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Gallery</a>
-          <a href="./partners.html">Partners</a>
+          <a href="./partners.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors">Partners</a>
         </div>
         <div class="hidden md:block">
-          <a href="./contact.html" class="bg-brand-red text-white px-6 py-2 rounded-lg font-semibold hover:bg-brand-navy transition-colors">Contact Us</a>
+          <a href="./contact.html" class="group relative bg-brand-red text-white px-8 py-3 rounded-sm font-medium inline-flex items-center transition-all duration-300 overflow-hidden hover:bg-brand-red/90">
+            <span class="relative z-10">Contact Us</span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
         </div>
-        <button id="mobileMenuBtn" class="md:hidden flex flex-col space-y-1.5 focus:outline-none z-50 relative" id="mobileMenuBtn">
+        <button id="mobileMenuBtn" class="md:hidden flex flex-col space-y-1.5 focus:outline-none z-50 relative">
           <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
           <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
           <span class="block w-6 h-0.5 bg-brand-navy transition-all"></span>
         </button>
       </div>
-      <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white max-h-0 overflow-hidden transition-all duration-300 ease-in-out" id="mobileMenu">
+      <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
         <div class="px-6 md:px-12 py-4 flex flex-col space-y-4">
           <a href="./index.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Home</a>
           <a href="./about.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">About</a>
           <a href="./overview.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Overview</a>
           <a href="#" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Programs</a>
           <a href="./gallery.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Gallery</a>
-          <a href="./partners.html">Partners</a>
+          <a href="./partners.html" class="text-brand-navy font-medium hover:text-brand-red transition-colors py-2">Partners</a>
           <a href="./contact.html" class="group relative bg-brand-red text-white px-8 py-3 rounded-sm font-medium inline-flex items-center transition-all duration-300 overflow-hidden hover:bg-brand-red/90 w-full justify-center">
             <span class="relative z-10">Contact Us</span>
-            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span></a>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
         </div>
       </div>
     </nav>
 
     <main>
-      <section class="min-h-screen bg-white flex items-center justify-center">
-        <div class="text-center">
-          <h1 class="text-5xl md:text-7xl font-bold text-brand-navy mb-4">Programs & Services</h1>
-          <p class="text-xl text-gray-600">Content coming soon...</p>
+      <!-- Page Header -->
+      <section class="bg-gradient-to-br from-brand-navy to-brand-blue py-8 md:py-12">
+        <div class="px-6 md:px-12">
+          <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+              <!-- Left Content -->
+              <div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4">Our Programs</h1>
+                <p class="text-white/90 text-lg mb-6">
+                  Comprehensive sports development and training programs designed for all skill levels.
+                </p>
+                <!-- Breadcrumb -->
+                <nav class="flex items-center gap-2 text-sm" aria-label="Breadcrumb">
+                  <a href="./index.html" class="text-white/80 hover:text-white transition-colors">Home</a>
+                  <span class="text-white/60">/</span>
+                  <span class="text-white/80">Programs</span>
+                </nav>
+              </div>
+
+              <!-- Right Illustration -->
+              <div class="hidden md:flex justify-end items-center">
+                <img src="./assets/illustrations/test.png" alt="Athlete" class="w-56 h-auto opacity-90">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Programs Section -->
+      <section class="bg-white py-16 md:py-24">
+        <div class="px-6 md:px-12">
+          <div class="max-w-6xl mx-auto">
+            <div class="mb-16">
+              <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-6">Physical Literacy Program</h2>
+              <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                Building strong athletic foundations for grades 1-4 with fundamental movement skills that form the basis for all sports.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-brand-navy rounded-lg p-6 text-white">
+                  <h3 class="text-lg font-semibold mb-2">Locomotor Skills</h3>
+                  <p class="text-sm text-white/80">Running, jumping, hopping, and climbing techniques</p>
+                </div>
+                <div class="bg-brand-navy rounded-lg p-6 text-white">
+                  <h3 class="text-lg font-semibold mb-2">Balance & Coordination</h3>
+                  <p class="text-sm text-white/80">Static and dynamic balance development</p>
+                </div>
+                <div class="bg-brand-navy rounded-lg p-6 text-white">
+                  <h3 class="text-lg font-semibold mb-2">Team Building</h3>
+                  <p class="text-sm text-white/80">Cooperation and social development through play</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-6">Sports Development Program</h2>
+              <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                Specialized training for grades 5-10 in multiple sports disciplines with professional coaching.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-brand-blue rounded-lg p-6 text-white">
+                  <h3 class="text-lg font-semibold mb-2">Athletics</h3>
+                  <p class="text-sm text-white/80">Track and field training programs</p>
+                </div>
+                <div class="bg-brand-blue rounded-lg p-6 text-white">
+                  <h3 class="text-lg font-semibold mb-2">Swimming</h3>
+                  <p class="text-sm text-white/80">Technique and endurance development</p>
+                </div>
+                <div class="bg-brand-blue rounded-lg p-6 text-white">
+                  <h3 class="text-lg font-semibold mb-2">Fencing</h3>
+                  <p class="text-sm text-white/80">Modern fencing techniques and tactics</p>
+                </div>
+                <div class="bg-brand-blue rounded-lg p-6 text-white">
+                  <h3 class="text-lg font-semibold mb-2">Shooting</h3>
+                  <p class="text-sm text-white/80">Precision and focus development</p>
+                </div>
+                <div class="bg-brand-blue rounded-lg p-6 text-white">
+                  <h3 class="text-lg font-semibold mb-2">Football</h3>
+                  <p class="text-sm text-white/80">Team sports and tactical training</p>
+                </div>
+                <div class="bg-brand-blue rounded-lg p-6 text-white">
+                  <h3 class="text-lg font-semibold mb-2">Fitness</h3>
+                  <p class="text-sm text-white/80">Conditioning and performance training</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-6">Health & Performance Monitoring</h2>
+              <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                Comprehensive health assessments and progress tracking to ensure optimal athlete development.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-gray-50 rounded-lg p-6 border border-brand-navy/10">
+                  <h3 class="text-lg font-semibold text-brand-navy mb-2">Medical Check-ups</h3>
+                  <p class="text-sm text-gray-600">Regular health evaluations by certified professionals</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6 border border-brand-navy/10">
+                  <h3 class="text-lg font-semibold text-brand-navy mb-2">Quarterly Assessments</h3>
+                  <p class="text-sm text-gray-600">Performance tracking and skill evaluation</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6 border border-brand-navy/10">
+                  <h3 class="text-lg font-semibold text-brand-navy mb-2">Progress Reports</h3>
+                  <p class="text-sm text-gray-600">Detailed feedback and development recommendations</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-6">Competition Pathways</h2>
+              <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                Structured competition opportunities from inter-school to international levels.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-red text-white">
+                      <iconify-icon icon="mdi:school" width="24" height="24"></iconify-icon>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-brand-navy">Inter-School Competitions</h3>
+                    <p class="text-gray-600 mt-2">Local tournaments and friendly matches</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-red text-white">
+                      <iconify-icon icon="mdi:city" width="24" height="24"></iconify-icon>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-brand-navy">District Competitions</h3>
+                    <p class="text-gray-600 mt-2">Regional championships and qualifiers</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-red text-white">
+                      <iconify-icon icon="mdi:trophy" width="24" height="24"></iconify-icon>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-brand-navy">National Competitions</h3>
+                    <p class="text-gray-600 mt-2">Elite-level national championships</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-red text-white">
+                      <iconify-icon icon="mdi:globe" width="24" height="24"></iconify-icon>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-semibold text-brand-navy">International Exposure</h3>
+                    <p class="text-gray-600 mt-2">Global competitions and exchange programs</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Program Benefits Section -->
+      <section class="bg-gray-50 py-16 md:py-24">
+        <div class="px-6 md:px-12">
+          <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-4 text-center">Program Benefits</h2>
+            <p class="text-gray-700 text-lg text-center mb-12 max-w-2xl mx-auto">
+              What athletes and families gain from our comprehensive programs.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-white rounded-lg p-6 flex gap-4">
+                <div class="flex-shrink-0">
+                  <iconify-icon icon="mdi:check-circle" width="32" height="32" class="text-brand-red"></iconify-icon>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-brand-navy mb-2">Professional Coaching</h3>
+                  <p class="text-gray-600">Learn from certified coaches with international experience</p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-6 flex gap-4">
+                <div class="flex-shrink-0">
+                  <iconify-icon icon="mdi:check-circle" width="32" height="32" class="text-brand-red"></iconify-icon>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-brand-navy mb-2">Structured Training</h3>
+                  <p class="text-gray-600">Age-appropriate programs with clear progression pathways</p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-6 flex gap-4">
+                <div class="flex-shrink-0">
+                  <iconify-icon icon="mdi:check-circle" width="32" height="32" class="text-brand-red"></iconify-icon>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-brand-navy mb-2">Health Monitoring</h3>
+                  <p class="text-gray-600">Regular assessments ensure safe and effective development</p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-6 flex gap-4">
+                <div class="flex-shrink-0">
+                  <iconify-icon icon="mdi:check-circle" width="32" height="32" class="text-brand-red"></iconify-icon>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-brand-navy mb-2">Competition Exposure</h3>
+                  <p class="text-gray-600">Safe environment to compete and test skills</p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-6 flex gap-4">
+                <div class="flex-shrink-0">
+                  <iconify-icon icon="mdi:check-circle" width="32" height="32" class="text-brand-red"></iconify-icon>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-brand-navy mb-2">Character Development</h3>
+                  <p class="text-gray-600">Build discipline, teamwork, and leadership skills</p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-lg p-6 flex gap-4">
+                <div class="flex-shrink-0">
+                  <iconify-icon icon="mdi:check-circle" width="32" height="32" class="text-brand-red"></iconify-icon>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-brand-navy mb-2">Scholarship Pathways</h3>
+                  <p class="text-gray-600">Opportunities for advanced athletes and education support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="bg-brand-navy py-16 md:py-20">
+        <div class="px-6 md:px-12 text-center">
+          <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4">Ready to Enroll?</h2>
+          <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            Contact us today to learn more about our programs and how to get your child started.
+          </p>
+          <a href="./contact.html" class="group relative px-8 py-3 bg-brand-red text-white font-medium inline-flex items-center transition-all duration-300 overflow-hidden rounded-sm hover:bg-brand-red/90">
+            <span class="relative z-10">Get Started</span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
         </div>
       </section>
     </main>
