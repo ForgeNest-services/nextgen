@@ -1,0 +1,17 @@
+{
+  "galleries": [
+    {
+      "id": 1,
+      "slug": "7th-national-championship",
+      "name": "7th National Championship",
+      "description": "Showcase of the 7th National Championship featuring athletes in action across various sports disciplines.",
+      "imagePath": "./assets/7th-national-championship",
+      "imageCount": 1225,
+      "thumbnails": [
+        "./assets/7th-national-championship/FENCING.jpg",
+        "./assets/7th-national-championship/FENCING-1.jpg",
+        "./assets/7th-national-championship/FENCING-10.jpg"
+      ]
+    }
+  ]
+}

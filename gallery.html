@@ -77,7 +77,7 @@
 
     <main>
       <!-- Page Header -->
-      <section class="bg-gradient-to-br from-brand-navy to-brand-blue py-8 md:py-12 min-h-[280px] flex items-center">
+      <section class="bg-linear-to-br from-brand-navy to-brand-blue py-8 md:py-12 min-h-70 flex items-center">
         <div class="px-6 md:px-12 w-full">
           <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
@@ -108,25 +108,15 @@
       <section class="bg-white py-16 md:py-24">
         <div class="px-6 md:px-12">
           <div class="max-w-6xl mx-auto">
-            <!-- Filter Tabs -->
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-              <button class="gallery-filter active px-6 py-2 rounded-full font-medium transition-all" data-filter="all">
-                All
-              </button>
-              <button class="gallery-filter px-6 py-2 rounded-full font-medium transition-all" data-filter="training">
-                Training
-              </button>
-              <button class="gallery-filter px-6 py-2 rounded-full font-medium transition-all" data-filter="events">
-                Events
-              </button>
-              <button class="gallery-filter px-6 py-2 rounded-full font-medium transition-all" data-filter="competitions">
-                Competitions
-              </button>
+            <!-- Gallery Title -->
+            <div class="mb-12 text-center">
+              <h2 class="text-4xl md:text-5xl font-semibold text-brand-navy mb-4">Gallery Collections</h2>
+              <p class="text-gray-600 text-lg max-w-2xl mx-auto">Browse our collection of events and championships</p>
             </div>
 
-            <!-- Gallery Grid -->
-            <div id="galleryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <!-- Gallery items will be populated by JavaScript -->
+            <!-- Gallery Cards Grid -->
+            <div id="galleryCardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <!-- Gallery cards will be populated by JavaScript -->
             </div>
           </div>
         </div>
@@ -145,10 +135,10 @@
     </div>
 
     <!-- CTA Section -->
-    <section class="py-16 md:py-24 bg-white">
+    <section class="pb-16 md:pb-24 bg-white">
       <div class="px-6 md:px-12">
         <div class="max-w-5xl mx-auto">
-          <div class="relative bg-gradient-to-br from-brand-navy via-brand-navy to-brand-blue rounded-2xl p-12 md:p-16 text-center overflow-hidden">
+          <div class="relative bg-linear-to-br from-brand-navy via-brand-navy to-brand-blue rounded-2xl p-12 md:p-16 text-center overflow-hidden">
             <!-- Decorative background elements -->
             <div class="absolute top-0 right-0 w-40 h-40 bg-brand-red/10 rounded-full -mr-20 -mt-20"></div>
             <div class="absolute bottom-0 left-0 w-32 h-32 bg-brand-red/5 rounded-full -ml-16 -mb-16"></div>
@@ -235,93 +225,90 @@
 
     <script src="./dist/index.js"></script>
     <script>
-      const galleryItems = [
-        { id: 1, category: 'training', image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=400&fit=crop', caption: 'Swimming Training Session' },
-        { id: 2, category: 'training', image: 'https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=600&h=400&fit=crop', caption: 'Track and Field Practice' },
-        { id: 3, category: 'training', image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop', caption: 'Fitness Training Program' },
-        { id: 4, category: 'events', image: 'https://images.unsplash.com/photo-1552674605-5defe6aa44bb?w=600&h=400&fit=crop', caption: 'School Sports Event' },
-        { id: 5, category: 'events', image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=400&fit=crop', caption: 'Athlete Meet and Greet' },
-        { id: 6, category: 'competitions', image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop', caption: 'Championship Competition' },
-        { id: 7, category: 'competitions', image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&h=400&fit=crop', caption: 'Regional Tournament' },
-        { id: 8, category: 'training', image: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86e81?w=600&h=400&fit=crop', caption: 'Coaching Session' },
-        { id: 9, category: 'competitions', image: 'https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=600&h=400&fit=crop', caption: 'District Finals' }
-      ];
+      // Load gallery data and render cards
+      fetch('./data/gallery.json')
+        .then(response => response.json())
+        .then(data => {
+          renderGalleryCards(data.galleries);
+        })
+        .catch(error => console.error('Error loading gallery:', error));
 
-      function renderGallery(filter = 'all') {
-        const grid = document.getElementById('galleryGrid');
+      function renderGalleryCards(galleries) {
+        const grid = document.getElementById('galleryCardsGrid');
         grid.innerHTML = '';
 
-        const filtered = filter === 'all' ? galleryItems : galleryItems.filter(item => item.category === filter);
-
-        filtered.forEach(item => {
+        galleries.forEach(gallery => {
           const card = document.createElement('div');
-          card.className = 'group cursor-pointer relative overflow-hidden rounded-lg';
+          card.className = 'bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow';
 
-          const img = document.createElement('img');
-          img.src = item.image;
-          img.alt = item.caption;
-          img.className = 'w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300';
+          // Thumbnails container
+          const imageContainer = document.createElement('div');
+          imageContainer.className = 'relative overflow-hidden h-64 bg-gray-200';
 
-          const overlay = document.createElement('div');
-          overlay.className = 'absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center';
+          // Create image carousel
+          const images = gallery.thumbnails || [];
+          let currentImageIndex = 0;
 
-          const caption = document.createElement('p');
-          caption.className = 'text-white text-center font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300';
-          caption.textContent = item.caption;
+          const displayImage = (index) => {
+            imageContainer.innerHTML = '';
+            const img = document.createElement('img');
+            img.src = images[index];
+            img.alt = gallery.name;
+            img.className = 'w-full h-full object-cover transition-transform duration-300 group-hover:scale-110';
+            img.loading = 'lazy';
+            imageContainer.appendChild(img);
+          };
 
-          overlay.appendChild(caption);
-          card.appendChild(img);
-          card.appendChild(overlay);
+          displayImage(0);
 
-          card.addEventListener('click', () => openLightbox(item.image, item.caption));
+          // Hover to cycle through thumbnails
+          imageContainer.addEventListener('mouseenter', () => {
+            const interval = setInterval(() => {
+              currentImageIndex = (currentImageIndex + 1) % images.length;
+              displayImage(currentImageIndex);
+            }, 800);
+
+            imageContainer.dataset.interval = interval;
+          });
+
+          imageContainer.addEventListener('mouseleave', () => {
+            clearInterval(imageContainer.dataset.interval);
+            currentImageIndex = 0;
+            displayImage(0);
+          });
+
+          card.appendChild(imageContainer);
+
+          // Card content
+          const content = document.createElement('div');
+          content.className = 'p-6';
+
+          const title = document.createElement('h3');
+          title.className = 'text-xl font-semibold text-brand-navy mb-2';
+          title.textContent = gallery.name;
+
+          const count = document.createElement('p');
+          count.className = 'text-sm text-gray-600 mb-3';
+          count.textContent = `${gallery.imageCount} images`;
+
+          const description = document.createElement('p');
+          description.className = 'text-gray-600 text-sm mb-6 line-clamp-2';
+          description.textContent = gallery.description;
+
+          const viewBtn = document.createElement('a');
+          viewBtn.href = `./gallery-details.html?slug=${gallery.slug}`;
+          viewBtn.className = 'group relative inline-block px-6 py-2 bg-brand-red text-white font-medium rounded-lg hover:bg-brand-red/90 transition-all overflow-hidden';
+          viewBtn.innerHTML = `<span class="relative z-10">View Gallery</span><span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>`;
+
+          content.appendChild(title);
+          content.appendChild(count);
+          content.appendChild(description);
+          content.appendChild(viewBtn);
+
+          card.appendChild(content);
           grid.appendChild(card);
         });
       }
-
-      function openLightbox(imageSrc, caption) {
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImage = document.getElementById('lightboxImage');
-        const lightboxCaption = document.getElementById('lightboxCaption');
-
-        lightboxImage.src = imageSrc;
-        lightboxCaption.textContent = caption;
-        lightbox.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeLightbox() {
-        const lightbox = document.getElementById('lightbox');
-        lightbox.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-      }
-
-      document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-      document.getElementById('lightbox').addEventListener('click', (e) => {
-        if (e.target === document.getElementById('lightbox')) {
-          closeLightbox();
-        }
-      });
-
-      document.querySelectorAll('.gallery-filter').forEach(button => {
-        button.addEventListener('click', () => {
-          document.querySelectorAll('.gallery-filter').forEach(b => {
-            b.classList.remove('active');
-            b.classList.remove('bg-brand-red', 'text-white');
-            b.classList.add('text-brand-navy', 'hover:bg-gray-100');
-          });
-          button.classList.add('active');
-          button.classList.add('bg-brand-red', 'text-white');
-          button.classList.remove('text-brand-navy', 'hover:bg-gray-100');
-          renderGallery(button.dataset.filter);
-        });
-      });
-
-      // Initialize
-      document.querySelectorAll('.gallery-filter')[0].classList.add('bg-brand-red', 'text-white');
-      document.querySelectorAll('.gallery-filter').slice(1).forEach(b => {
-        b.classList.add('text-brand-navy', 'hover:bg-gray-100');
-      });
-      renderGallery();
     </script>
   </body>
 </html>
