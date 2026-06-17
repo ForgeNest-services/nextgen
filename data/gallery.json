@@ -1,17 +1,84 @@
-{
-  "galleries": [
-    {
-      "id": 1,
-      "slug": "7th-national-championship",
-      "name": "7th National Championship",
-      "description": "Showcase of the 7th National Championship featuring athletes in action across various sports disciplines.",
-      "imagePath": "./assets/7th-national-championship",
-      "imageCount": 1225,
-      "thumbnails": [
-        "./assets/7th-national-championship/FENCING.jpg",
-        "./assets/7th-national-championship/FENCING-1.jpg",
-        "./assets/7th-national-championship/FENCING-10.jpg"
-      ]
-    }
-  ]
+﻿{
+    "galleries":  [
+                      {
+                          "id":  1,
+                          "imagePath":  "./assets/7th-national-championship",
+                          "name":  "7th National Championship",
+                          "description":  "Showcase of the 7th National Championship featuring athletes in action across various sports disciplines.",
+                          "images":  [
+                                         "FENCING.jpg",
+                                         "FENCING-1008.jpg",
+                                         "FENCING-1025.jpg",
+                                         "FENCING-104.jpg",
+                                         "FENCING-1043.jpg",
+                                         "FENCING-1058.jpg",
+                                         "FENCING-1086.jpg",
+                                         "FENCING-1119.jpg",
+                                         "FENCING-1151.jpg",
+                                         "FENCING-1162.jpg",
+                                         "FENCING-1168.jpg",
+                                         "FENCING-1170.jpg",
+                                         "FENCING-119.jpg",
+                                         "FENCING-1191.jpg",
+                                         "FENCING-1197.jpg",
+                                         "FENCING-1205.jpg",
+                                         "FENCING-1216.jpg",
+                                         "FENCING-1224.jpg",
+                                         "FENCING-145.jpg",
+                                         "FENCING-160.jpg",
+                                         "FENCING-18.jpg",
+                                         "FENCING-193.jpg",
+                                         "FENCING-197.jpg",
+                                         "FENCING-217.jpg",
+                                         "FENCING-22.jpg",
+                                         "FENCING-221.jpg",
+                                         "FENCING-238.jpg",
+                                         "FENCING-24.jpg",
+                                         "FENCING-266.jpg",
+                                         "FENCING-3.jpg",
+                                         "FENCING-309.jpg",
+                                         "FENCING-327.jpg",
+                                         "FENCING-336.jpg",
+                                         "FENCING-371.jpg",
+                                         "FENCING-389.jpg",
+                                         "FENCING-398.jpg",
+                                         "FENCING-402.jpg",
+                                         "FENCING-408.jpg",
+                                         "FENCING-41.jpg",
+                                         "FENCING-47.jpg",
+                                         "FENCING-516.jpg",
+                                         "FENCING-535.jpg",
+                                         "FENCING-560 - Copy.jpg",
+                                         "FENCING-563 - Copy.jpg",
+                                         "FENCING-57.jpg",
+                                         "FENCING-576 - Copy.jpg",
+                                         "FENCING-577 - Copy.jpg",
+                                         "FENCING-585 - Copy.jpg",
+                                         "FENCING-590 - Copy.jpg",
+                                         "FENCING-62.jpg",
+                                         "FENCING-647 - Copy.jpg",
+                                         "FENCING-652 - Copy.jpg",
+                                         "FENCING-69.jpg",
+                                         "FENCING-71.jpg",
+                                         "FENCING-72.jpg",
+                                         "FENCING-739 - Copy.jpg",
+                                         "FENCING-797.jpg",
+                                         "FENCING-810.jpg",
+                                         "FENCING-818.jpg",
+                                         "FENCING-82.jpg",
+                                         "FENCING-833.jpg",
+                                         "FENCING-85.jpg",
+                                         "FENCING-855.jpg",
+                                         "FENCING-911.jpg",
+                                         "FENCING-912.jpg"
+                                     ],
+                          "slug":  "7th-national-championship",
+                          "imageCount":  65,
+                          "thumbnails":  [
+                                             "./assets/7th-national-championship/FENCING.jpg",
+                                         "./assets/7th-national-championship/FENCING-1008.jpg",
+                                         "./assets/7th-national-championship/FENCING-1025.jpg"
+                                         ]
+                      }
+                  ]
 }

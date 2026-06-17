@@ -125,13 +125,35 @@
       </section>
     </main>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
-      <div class="relative max-w-4xl w-full">
-        <button id="lightboxClose" class="absolute -top-10 right-0 text-white hover:text-brand-red transition-colors">
+    <!-- Lightbox Modal with Slider -->
+    <div id="lightbox" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+      <div class="relative max-w-5xl w-full h-full md:h-auto flex flex-col">
+        <!-- Close Button -->
+        <button id="lightboxClose" class="absolute -top-10 right-0 text-white hover:text-brand-red transition-colors z-10">
           <iconify-icon icon="mdi:close" width="32" height="32"></iconify-icon>
         </button>
-        <img id="lightboxImage" src="" alt="" class="w-full h-auto rounded-lg">
+
+        <!-- Image Container -->
+        <div class="relative flex-1 md:flex-none flex items-center justify-center overflow-hidden rounded-lg bg-black">
+          <img id="lightboxImage" src="" alt="" class="w-full h-full object-contain">
+
+          <!-- Previous Button -->
+          <button id="lightboxPrev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-all">
+            <iconify-icon icon="mdi:chevron-left" width="32" height="32"></iconify-icon>
+          </button>
+
+          <!-- Next Button -->
+          <button id="lightboxNext" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition-all">
+            <iconify-icon icon="mdi:chevron-right" width="32" height="32"></iconify-icon>
+          </button>
+
+          <!-- Image Counter -->
+          <div class="absolute top-4 left-4 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium">
+            <span id="lightboxCounter">1</span> / <span id="lightboxTotal">0</span>
+          </div>
+        </div>
+
+        <!-- Caption -->
         <p id="lightboxCaption" class="text-white text-center mt-4 text-sm"></p>
       </div>
     </div>
@@ -256,17 +278,27 @@
           document.getElementById('galleryDescription').textContent = galleryData.description;
           document.getElementById('breadcrumbTitle').textContent = galleryData.name;
 
-          // Generate all image paths
-          allImages.push({
-            image: `${galleryData.imagePath}/FENCING.jpg`,
-            caption: galleryData.name
-          });
-
-          for (let i = 1; i < galleryData.imageCount; i++) {
-            allImages.push({
-              image: `${galleryData.imagePath}/FENCING-${i}.jpg`,
-              caption: `${galleryData.name} - Image ${i + 1}`
+          // Load images from JSON (actual filenames)
+          if (galleryData.images && Array.isArray(galleryData.images)) {
+            galleryData.images.forEach((imageName, index) => {
+              allImages.push({
+                image: `${galleryData.imagePath}/${imageName}`,
+                caption: `${galleryData.name} - Image ${index + 1}`
+              });
             });
+          } else {
+            // Fallback: if images array not present
+            allImages.push({
+              image: `${galleryData.imagePath}/FENCING.jpg`,
+              caption: galleryData.name
+            });
+
+            for (let i = 1; i < galleryData.imageCount; i++) {
+              allImages.push({
+                image: `${galleryData.imagePath}/FENCING-${i}.jpg`,
+                caption: `${galleryData.name} - Image ${i + 1}`
+              });
+            }
           }
 
           // Load first page
@@ -330,13 +362,21 @@
         updateLoadMoreButton();
       });
 
+      let currentLightboxIndex = 0;
+
       function openLightbox(imageSrc, caption) {
         const lightbox = document.getElementById('lightbox');
         const lightboxImage = document.getElementById('lightboxImage');
         const lightboxCaption = document.getElementById('lightboxCaption');
 
+        // Find current image index
+        currentLightboxIndex = allImages.findIndex(img => img.image === imageSrc);
+
         lightboxImage.src = imageSrc;
         lightboxCaption.textContent = caption;
+        document.getElementById('lightboxCounter').textContent = currentLightboxIndex + 1;
+        document.getElementById('lightboxTotal').textContent = allImages.length;
+
         lightbox.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
       }
@@ -347,7 +387,72 @@
         document.body.style.overflow = 'auto';
       }
 
+      function showLightboxImage(index) {
+        if (index < 0 || index >= allImages.length) return;
+
+        currentLightboxIndex = index;
+        const item = allImages[index];
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+
+        lightboxImage.src = item.image;
+        lightboxCaption.textContent = item.caption;
+        document.getElementById('lightboxCounter').textContent = index + 1;
+      }
+
+      function nextLightboxImage() {
+        showLightboxImage(currentLightboxIndex + 1);
+      }
+
+      function prevLightboxImage() {
+        showLightboxImage(currentLightboxIndex - 1);
+      }
+
+      // Close button
       document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+
+      // Previous/Next buttons
+      document.getElementById('lightboxPrev').addEventListener('click', prevLightboxImage);
+      document.getElementById('lightboxNext').addEventListener('click', nextLightboxImage);
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        const lightbox = document.getElementById('lightbox');
+        if (lightbox.classList.contains('hidden')) return;
+
+        if (e.key === 'ArrowLeft') prevLightboxImage();
+        if (e.key === 'ArrowRight') nextLightboxImage();
+        if (e.key === 'Escape') closeLightbox();
+      });
+
+      // Swipe gestures
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      const lightboxElement = document.getElementById('lightbox');
+      lightboxElement.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, false);
+
+      lightboxElement.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, false);
+
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff > 0) {
+            nextLightboxImage(); // Swiped left, show next
+          } else {
+            prevLightboxImage(); // Swiped right, show prev
+          }
+        }
+      }
+
+      // Click outside to close
       document.getElementById('lightbox').addEventListener('click', (e) => {
         if (e.target === document.getElementById('lightbox')) {
           closeLightbox();

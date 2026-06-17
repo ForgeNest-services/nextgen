@@ -249,8 +249,10 @@
           const imageContainer = document.createElement('div');
           imageContainer.className = 'w-full h-full';
 
-          // Create image carousel
-          const images = gallery.thumbnails || [];
+          // Create image carousel - use thumbnails array from JSON
+          const images = gallery.thumbnails && Array.isArray(gallery.thumbnails)
+            ? gallery.thumbnails
+            : [];
           let currentImageIndex = 0;
 
           const displayImage = (index) => {
