@@ -3,14 +3,31 @@
     "id": 1,
     "slug": "training-development",
     "title": "Training & Development",
+    "shortDescription": "Professional coaching and mentorship programs designed to unlock the potential of every young athlete.",
     "description": "Professional coaching and mentorship programs designed to unlock the potential of every young athlete. Our certified coaches provide structured training in swimming, fencing, athletics, and other disciplines, tailored for all skill levels.",
+    "longDescription": "At NextGen Sports Nepal, we believe that foundational training is the cornerstone of athletic excellence. Our Training & Development program is meticulously designed to introduce young athletes to multiple sports disciplines while building essential motor skills, fitness levels, and sports knowledge. With certified coaches holding international qualifications and modern training facilities, we create a nurturing environment where athletes can discover their passion for sport and develop fundamental skills that will serve them throughout their athletic careers. Our structured curriculum ensures progressive skill development, from basic movement patterns to sport-specific techniques.",
     "image": "./assets/overview/overview-2.jpeg",
+    "images": [
+      "./assets/overview/overview-2.jpeg",
+      "./assets/7th-national-championship/FENCING.jpg",
+      "./assets/7th-national-championship/FENCING-1008.jpg"
+    ],
     "imageAlt": "Training & Development",
     "features": [
-      "Professional Coaching",
-      "Structured Programs",
+      "International Certified Coaches",
+      "Structured Progressive Curriculum",
       "Multi-Sport Options",
-      "Skill Development"
+      "Personalized Development Plans",
+      "Modern Training Facilities",
+      "Regular Assessment & Feedback"
+    ],
+    "benefits": [
+      "Build strong athletic foundation",
+      "Learn from internationally certified coaches",
+      "Discover your preferred sport",
+      "Safe and supportive learning environment",
+      "Measurable progress tracking",
+      "Qualified coaching in multiple disciplines"
     ],
     "backgroundColor": "bg-brand-navy"
   },
@@ -18,14 +35,31 @@
     "id": 2,
     "slug": "competitive-training",
     "title": "Competitive Training",
+    "shortDescription": "Once fundamentals are mastered, athletes transition to competitive training with focus on technical refinement and mental preparation.",
     "description": "Once fundamentals are mastered, athletes transition to competitive training. This phase focuses on technical refinement, tactical awareness, and mental preparation for real competition. Athletes train alongside peers, participate in regular tournaments, and develop competitive spirit.",
+    "longDescription": "The Competitive Training phase represents a pivotal transition in an athlete's development journey. This is where athletes move beyond foundational skills to master advanced techniques, understand game tactics, and develop the mental resilience required for competition. Our program incorporates regular tournaments, competitive simulations, and specialized coaching focused on match strategy. Athletes benefit from peer competition, where they learn from training partners and gain invaluable experience competing against athletes at similar or higher skill levels. Our coaches provide detailed performance analysis and personalized coaching to help each athlete overcome challenges and achieve breakthroughs.",
     "image": "./assets/overview/overview-3.jpeg",
+    "images": [
+      "./assets/overview/overview-3.jpeg",
+      "./assets/7th-national-championship/FENCING-1008.jpg",
+      "./assets/7th-national-championship/FENCING-1025.jpg"
+    ],
     "imageAlt": "Competitive Training",
     "features": [
-      "Advanced Techniques",
-      "Tactical Training",
-      "Regular Tournaments",
-      "Peer Competition"
+      "Advanced Technical Training",
+      "Tactical Strategy Coaching",
+      "Regular Competition Experience",
+      "Mental Performance Coaching",
+      "Performance Video Analysis",
+      "Specialized Equipment & Facilities"
+    ],
+    "benefits": [
+      "Master advanced technical skills",
+      "Develop tactical awareness and game intelligence",
+      "Build mental toughness through competition",
+      "Regular tournament participation",
+      "Learn from peer competition",
+      "Receive detailed performance feedback"
     ],
     "backgroundColor": "bg-brand-blue"
   },
@@ -33,14 +67,31 @@
     "id": 3,
     "slug": "excellence-achievement",
     "title": "Excellence & Achievement",
+    "shortDescription": "Our athletes achieve recognition through medals, scholarships, and accolades. We celebrate every milestone and create pathways for advancement.",
     "description": "Our athletes achieve recognition through medals, scholarships, and accolades. We celebrate every milestone, from first competition to national championship. This phase recognizes dedication and creates pathways for continued advancement at elite levels.",
+    "longDescription": "Excellence is not merely about winning medals—it represents the culmination of dedication, hard work, and continuous improvement. At NextGen Sports Nepal, we celebrate every achievement of our athletes, whether it's a first medal, a personal best, or a national championship title. Our Excellence & Achievement program focuses on elite-level training and preparation for prestigious competitions. We provide comprehensive support including sports psychology, nutrition guidance, injury prevention, and access to scholarship opportunities. Our athletes receive recognition not only for their competitive wins but also for their sportsmanship, leadership, and contribution to the sports community.",
     "image": "./assets/overview/overview-1.jpeg",
+    "images": [
+      "./assets/overview/overview-1.jpeg",
+      "./assets/7th-national-championship/FENCING-1025.jpg",
+      "./assets/7th-national-championship/FENCING-104.jpg"
+    ],
     "imageAlt": "Excellence & Achievement",
     "features": [
-      "Medal Recognition",
-      "Scholarship Programs",
-      "Leadership Development",
-      "Awards & Honors"
+      "Elite-Level Training Programs",
+      "Sports Psychology Support",
+      "Nutrition & Fitness Coaching",
+      "Injury Prevention & Rehabilitation",
+      "Scholarship Opportunities",
+      "Leadership Development"
+    ],
+    "benefits": [
+      "Recognition and awards for achievements",
+      "Access to scholarship programs",
+      "Professional sports psychology support",
+      "Comprehensive fitness and nutrition guidance",
+      "Media coverage and publicity",
+      "Mentorship from elite athletes and coaches"
     ],
     "backgroundColor": "bg-brand-navy"
   },
@@ -48,14 +99,31 @@
     "id": 4,
     "slug": "championship-international",
     "title": "Championship & International Pathways",
+    "shortDescription": "Elite athletes progress to national championships and international competitions, representing Nepal on global stages.",
     "description": "Elite athletes progress to national championships and international competitions. We provide pathways for representation at the highest levels of sport, preparing athletes to compete with the best and represent Nepal with pride on global stages.",
+    "longDescription": "The Championship & International Pathways program is designed for elite athletes ready to compete on the national and international stage. Through partnerships with national sports federations, international sports bodies, and championship organizers, we ensure our athletes have access to the world's most prestigious competitions. Our program includes elite-level coaching from international coaches, advanced training methodologies aligned with international standards, and comprehensive preparation for major championships. Athletes receive support in visa processes, international travel arrangements, and adaptation to different training environments and competition conditions. This pathway has produced athletes who have represented Nepal at national championships, regional tournaments, and international competitions.",
     "image": "./assets/overview/overview-4.jpeg",
+    "images": [
+      "./assets/overview/overview-4.jpeg",
+      "./assets/7th-national-championship/FENCING-1043.jpg",
+      "./assets/7th-national-championship/FENCING-1058.jpg"
+    ],
     "imageAlt": "Championship & International",
     "features": [
-      "National Championships",
-      "International Competitions",
-      "Elite Training",
-      "Global Recognition"
+      "International Competition Access",
+      "Elite Coaching Staff",
+      "National Federation Partnerships",
+      "Championship Preparation Programs",
+      "International Training Standards",
+      "Global Networking Opportunities"
+    ],
+    "benefits": [
+      "Compete in national championships",
+      "International competition exposure",
+      "Training from world-class international coaches",
+      "Global recognition and rankings",
+      "Networking with international athletes",
+      "Pathways to professional sports opportunities"
     ],
     "backgroundColor": "bg-brand-blue"
   }
